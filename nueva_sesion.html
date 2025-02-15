@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FloreceSanandoApp</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nuevo_paciente.html">Nuevo Paciente</a></li>
+                <li><a href="historial_pacientes.html">Historial de pacientes</a></li>
+                <li><a href="nueva_sesion.html">Nueva Sesión</a></li>
+                <li><a href="historial_sesiones.html">Historial de sesiones</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="manual.html">Manual de uso</a></li>
+                <li><a href="recordatorios.html">Recordatorios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="nueva-sesion">
+            <h1>Registrar Nueva Sesión</h1>
+            <div id="datosPaciente">
+                <!-- Aquí se insertarán los datos del paciente -->
+            </div>
+            <textarea id="anotaciones" placeholder="Escribe las anotaciones de la sesión..."></textarea>
+            <div class="botones">
+                <button id="guardarSesion" class="boton-interactivo">Guardar Sesión</button>
+                <button id="cancelarSesion" class="boton-interactivo cancelar">Cancelar</button>
+                <button id="limpiarSesion" class="boton-interactivo">Limpiar</button>
+            </div>
+            <div id="notificacion" class="notificacion" style="display:none;"></div>
+            <div id="alerta" class="alerta" style="display:none;">Sesión guardada con éxito</div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

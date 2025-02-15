@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">FloreceSanandoApp</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nuevo_paciente.html">Nuevo Paciente</a></li>
+                <li><a href="historial_pacientes.html">Historial de pacientes</a></li>
+                <li><a href="nueva_sesion.html">Nueva Sesión</a></li>
+                <li><a href="historial_sesiones.html">Historial de sesiones</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="manual.html">Manual de uso</a></li>
+                <li><a href="recordatorios.html">Recordatorios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pagos">
+            <h1>Historial de Pagos</h1>
+            <div class="pagos-contenido">
+                <div class="pagos-seccion">
+                    <button id="nuevoPagoBtn" class="boton-interactivo">Nuevo pago</button>
+                    <div id="nuevoPagoForm" class="formulario" style="display: none;">
+                        <label for="nombrePago">Nombre:</label>
+                        <input type="text" id="nombrePago" required>
+                        
+                        <label for="rutPago">Rut:</label>
+                        <input type="text" id="rutPago" required>
+                        
+                        <label for="ordenPago">Orden de pago:</label>
+                        <input type="text" id="ordenPago" readonly>
+                        
+                        <label for="montoPago">Monto:</label>
+                        <input type="number" id="montoPago" required>
+                        
+                        <label for="metodoPago">Método de pago:</label>
+                        <select id="metodoPago" required>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="tarjeta">Tarjeta</option>
+                            <option value="transferencia">Transferencia</option>
+                        </select>
+                        
+                        <button id="guardarPagoBtn" class="boton-interactivo">Guardar pago</button>
+                        <button id="cancelarPagoBtn" class="boton-interactivo cancelar">Cancelar</button>
+                    </div>
+                    <div id="notificacion" class="notificacion" style="display:none;"></div>
+                    <section class="registros-pago">
+                        <h2>Registros de pago</h2>
+                        <div id="registrosPagoContainer">
+                            <!-- Aquí se insertarán los registros de pago -->
+                        </div>
+                    </section>
+                </div>
+                <div class="grafico-seccion">
+                    <h2>Gráfico Contable</h2>
+                    <div class="grafico-container">
+                        <canvas id="graficoContable"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

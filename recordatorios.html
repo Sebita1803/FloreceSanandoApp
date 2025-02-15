@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordatorios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/es.js'></script>
+</head>
+<body>
+    <header>
+        <div class="logo">FloreceSanandoApp</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nuevo_paciente.html">Nuevo Paciente</a></li>
+                <li><a href="historial_pacientes.html">Historial de pacientes</a></li>
+                <li><a href="nueva_sesion.html">Nueva Sesión</a></li>
+                <li><a href="historial_sesiones.html">Historial de sesiones</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="manual.html">Manual de uso</a></li>
+                <li><a href="recordatorios.html">Recordatorios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="recordatorios">
+            <h1>Recordatorios</h1>
+            <button id="nuevoRecordatorioBtn" class="boton-interactivo">Nuevo recordatorio</button>
+            <div id="nuevoRecordatorioForm" class="formulario" style="display: none;">
+                <label for="textoRecordatorio">Recordatorio:</label>
+                <textarea id="textoRecordatorio" required></textarea>
+                
+                <label for="fechaRecordatorio">Fecha:</label>
+                <input type="date" id="fechaRecordatorio" required>
+                
+                <div class="botones">
+                    <button id="guardarRecordatorioBtn" class="boton-interactivo">Guardar Recordatorio</button>
+                    <button id="cancelarRecordatorioBtn" class="boton-interactivo cancelar">Cancelar</button>
+                </div>
+            </div>
+            <div id="notificacion" class="notificacion" style="display:none;"></div>
+            <section class="registro-recordatorios">
+                <h2>Registro de recordatorios</h2>
+                <div id="registroRecordatoriosContainer" class="recordatorios-container">
+                    <!-- Aquí se insertarán los recordatorios -->
+                </div>
+            </section>
+            <section class="calendario">
+                <h2>Calendario de Recordatorios</h2>
+                <div id="calendar"></div>
+            </section>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

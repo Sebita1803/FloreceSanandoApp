@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloreceSanandoApp - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">FloreceSanandoApp</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Pacientes</a>
+                    <ul>
+                        <li><a href="nuevo_paciente.html">Nuevo Paciente</a></li>
+                        <li><a href="historial_pacientes.html">Historial de pacientes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sesiones</a>
+                    <ul>
+                        <li><a href="nueva_sesion.html">Nueva Sesión</a></li>
+                        <li><a href="historial_sesiones.html">Historial de sesiones</a></li>
+                    </ul>
+                </li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="manual.html">Manual de uso</a></li>
+                <li><a href="recordatorios.html">Recordatorios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portada">
+            <h1 class="bienvenida">Bienvenido a FloreceSanando</h1>
+        </section>
+        <section class="contenido">
+            <div class="introduccion">
+                <h2 class="titulo">Introducción a FloreceSanandoApp</h2>
+                <p class="objetivo">Nuestro objetivo principal es proporcionar una plataforma integral para la gestión de pacientes y sesiones terapéuticas.</p>
+                <p class="mision">Misión: Mejorar la calidad de vida de nuestros pacientes a través de un seguimiento detallado y personalizado.</p>
+                <p class="vision">Visión: Ser la plataforma líder en gestión terapéutica, reconocida por su innovación y efectividad.</p>
+                <p class="beneficios">Beneficios de usar FloreceSanandoApp:</p>
+                <ul class="lista-beneficios">
+                    <li>Gestión eficiente de pacientes y sesiones.</li>
+                    <li>Historial detallado y accesible en cualquier momento.</li>
+                    <li>Gráficos y estadísticas para un análisis profundo.</li>
+                    <li>Facilidad de uso y diseño intuitivo.</li>
+                    <li>Seguridadvo.vierte y privacidad de los datos garantizada.</li>
+                </ul>
+                <p class="llamado-accion">¡Empieza hoy mismo a mejorar la gestión de tus pacientes con FloreceSanandoApp!</p>
+            </div>
+            <div class="grafico-container">
+                <canvas id="graficoResumen"></canvas>
+                <button class="boton-interactivo" onclick="redirigirManual()">¿Cómo usar FloreceSanandoApp?</button>
+            </div>
+        </section>
+        <div id="notificaciones" class="notificaciones-container"></div>
+    </main>
+    <script>
+        // Redirigir a index.html si se accede a la raíz del servidor
+        if (window.location.pathname === '/') {
+            window.location.href = 'http://127.0.0.1:5500/index.html#';
+        }
+
+        function redirigirManual() {
+            window.location.href = 'http://127.0.0.1:5500/manual.html';
+        }
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
